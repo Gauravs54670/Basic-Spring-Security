@@ -1,4 +1,5 @@
 🔐 Basic Spring Security Authentication Flow
+
 When a client sends a request to a secured endpoint in a Spring Boot application, Spring Security first intercepts the request using the SecurityFilterChain. This filter chain checks whether the incoming request matches any publicly accessible URL patterns (like /api/public/**) or if it requires authentication. If the endpoint is protected, Spring delegates the authentication process to the AuthenticationManager.
 
 The AuthenticationManager internally uses an AuthenticationProvider, commonly a DaoAuthenticationProvider, to perform authentication. This provider calls the custom UserDetailsService (usually implemented by the developer) to load user details from the database based on the username received from the request.
